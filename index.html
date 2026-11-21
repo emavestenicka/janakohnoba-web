@@ -1,306 +1,256 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psychoterapie a poradenství - Moje služby</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="fonty.css">
-  <link rel="icon" type="image/svg+xml" href="ikonky/zkouska2.svg">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mgr. Jana Kohnová – Psychologické poradenství, psychoterapie a supervize</title>
+<meta name="description" content="Psychologické poradenství a diagnostika, poradenská psychoterapie a supervize. Mgr. Jana Kohnová, Uherské Hradiště a on-line. Členka ČAP.">
+<link rel="icon" type="image/svg+xml" href="ikonky/zkouska2.svg">
+<link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-latin-ext-400-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--bg:#DCDDCF;--ink:#2B3320;--muted:#4A5240;--line:#B6B9A6;--surface:#D0D2C2}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:clip}
+a{color:inherit;text-decoration:none}a:hover{opacity:.65}
+a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+img{max-width:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<button id="scrollUpBtn" aria-label="Zpět nahoru">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <circle cx="12" cy="12" r="12" fill="none" />
-    <path d="M8 14l4-4 4 4" stroke="var(--btn-fg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </svg>
-</button>
-
 <body>
-  <a href="index.html" class="fixed-logo" aria-label="Homepage logo" title="Homepage">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M9 21H4C3.44772 21 3 20.5523 3 20V12.4142C3 12.149 3.10536 11.8946 3.29289 11.7071L11.2929 3.70711C11.6834 3.31658 12.3166 3.31658 12.7071 3.70711L20.7071 11.7071C20.8946 11.8946 21 12.149 21 12.4142V20C21 20.5523 20.5523 21 20 21H15M9 21H15M9 21V15C9 14.4477 9.44772 14 10 14H14C14.5523 14 15 14.4477 15 15V21"
-        stroke="white" stroke-linejoin="round"></path>
-    </svg>
-  </a>
-  <div class="section-indicator"></div>
-  <nav class="navbar minimal-nav">
-    <div class="nav-center">
-      <a href="index.html" class="nav-logo nav-active">Moje služby</a>
-      <a href="o-mne.html">O mně</a>
-      <a href="cenik.html">Ceník</a>
-      <a href="kontakt.html">Kontakt</a>
-    </div>
-    <div class="nav-right">
-      <a href="mailto:jana.kohnova@gmail.com" class="cta-btn" id="copyEmailBtn">jana.kohnova@gmail.com</a>
-    </div>
+<div style="width: 100%; min-height: 100vh; background: var(--bg); color: var(--ink); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px)">
 
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <nav style="padding: 28px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+    <a href="#" style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 26px; line-height: 1">Jana Kohnová</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 15px">
+      <a href="#terapie" style="padding: 10px 18px; border-radius: 999px; border: 1px solid var(--ink)">Psychoterapie</a>
+      <a href="#supervize" style="padding: 10px 18px; border-radius: 999px; border: 1px solid var(--ink)">Supervize</a>
+      <a href="#omne" style="padding: 10px 18px; border-radius: 999px; border: 1px solid var(--ink)">O mně</a>
+      <a href="#cenik" style="padding: 10px 18px; border-radius: 999px; border: 1px solid var(--ink)">Ceník</a>
+      <a href="#kontakt" style="padding: 10px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); border: 1px solid var(--ink)">Kontakt</a>
     </div>
   </nav>
 
-  <div class="mobile-menu">
-    <a href="index.html" class="nav-logo nav-active">Moje služby</a>
-    <a href="o-mne.html">O mně</a>
-    <a href="cenik.html">Ceník</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="#" class="cta-btn" id="copyEmailBtn">jana.kohnova@gmail.com</a>
-  </div>
-
-  <main class="main-hero">
-    <section>
-
-      <h1 class="main-title" style="letter-spacing: 1px;">
-        Psychologické poradenství
-        <span class="main-title-and">
-          <span class="mobile-break"><br>a<br></span>
-          <span class="desktop-and"> a </span>
-        </span>
-        diagnostika
-        <span class="main-title-line2">Poradenská psychoterapie</span>
-      </h1>
-      <h2 class="main-subtitle">Mgr. Jana Kohnová</h2>
-      <div class="hero-svg-icon">
-        <svg width="642" height="602" viewBox="0 0 642 602" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M346.698 264.655C365.812 263.388 386.561 270.565 399.827 283.032C411.24 293.758 415.893 300.973 422.821 318.691C429.375 335.453 431.487 347.711 432.627 375.586C433.804 404.356 433.671 419.577 432.144 430.799C430.753 441.019 429.787 443.222 426.698 443.222C424.879 443.222 422.334 440.75 422.334 438.985C422.335 438.253 422.861 434.081 423.503 429.712C424.856 420.515 425.164 401.871 424.257 384.129L423.634 371.946L421.64 374.674C418.483 378.997 413.096 383.636 405.244 388.793C393.535 396.481 387.768 398.904 369.922 403.64C354.468 407.741 344.252 409.461 328.88 410.545C310.804 411.821 294.349 410.39 278.334 406.147C269.772 403.879 270.439 402.54 271.897 419.041C273.907 441.794 273.683 443.95 269.304 443.95C265.851 443.95 265.46 442.47 264.216 424.677C262.468 399.674 262.869 401.5 258.828 400.14C256.957 399.51 252.153 397.526 248.153 395.731C244.153 393.936 237.116 390.865 232.516 388.908C222.358 384.585 201.474 372.368 200.843 370.379C200.224 368.429 202.364 365.404 204.363 365.404C205.26 365.404 211.173 368.354 217.502 371.959C223.935 375.622 233.463 380.276 239.106 382.512C244.658 384.712 251.682 387.643 254.714 389.025C270.887 396.395 297.875 402.484 314.411 402.492C331.918 402.501 348.45 400.226 367.475 395.19C383.797 390.87 389.679 388.394 400.532 381.273C413.123 373.011 417.34 367.814 419.365 358.061C420.969 350.332 416.393 336.337 411.421 333.766C410.223 333.147 409.244 332.328 409.244 331.946C409.244 329.856 396.309 326.126 389.092 326.136C385.799 326.141 377.61 327.881 353.29 333.745C336.126 337.883 325.791 338.873 310.082 337.884C290.77 336.669 276.719 333.193 259.971 325.489C252.622 322.108 249.971 319.819 249.971 316.855C249.971 312.833 253.872 311.692 257.203 314.741C258.225 315.676 260.862 317.196 263.062 318.119C265.262 319.042 268.118 320.242 269.409 320.786C271.747 321.77 271.753 321.767 271.066 319.96C270.687 318.962 270.612 317.562 270.901 316.849C272.003 314.126 279.502 302.265 283.377 297.117C289.423 289.084 289.469 289.018 289.163 288.79C288.064 287.967 277.106 282.962 273.244 281.518C261.169 277.005 245.483 275.696 235.425 278.363C224.232 281.331 213.406 288.279 205.482 297.581C181.785 325.397 173.675 378.39 184.217 436.523C185.973 446.204 186.021 447.037 184.928 448.705C183.335 451.136 179.89 451.153 178.307 448.737C176.01 445.231 172.623 421.708 171.386 400.669C170.087 378.575 172.102 355.111 176.87 336.776C186.229 300.796 206.049 277.189 232.88 270.064C240.694 267.989 254.965 267.824 263.788 269.707C275.937 272.298 291.412 278.905 293.386 282.344L294.601 284.461L300.498 280.243C312.756 271.475 329.614 265.787 346.698 264.655ZM368.244 275.617C352.618 271.126 334.819 273.012 316.613 281.085C302.209 287.471 292.665 296.464 282.03 313.672C279.483 317.793 276.709 321.43 275.867 321.754C274.394 322.322 274.412 322.376 276.309 323.12C282.799 325.665 295.75 328.298 305.607 329.075C315.692 329.87 330.536 329.379 338.334 327.992C341.934 327.351 353.062 324.8 363.062 322.322C379.495 318.249 381.978 317.814 388.88 317.806C398.421 317.795 406.175 319.509 411.739 322.859C416.582 325.775 416.588 326.286 411.659 314.495C407.718 305.067 405.227 301.258 397.943 293.515C389.114 284.13 381.137 279.322 368.244 275.617Z"
-            fill="black" />
-          <path
-            d="M331.468 111.287C343.646 105.241 355.699 104.394 368.575 108.677C385.232 114.217 400.847 130.851 407.489 150.131C408.247 152.331 409.046 154.295 409.265 154.495C409.761 154.953 411.947 168.493 412.563 174.92C412.816 177.554 412.645 183.445 412.183 188.011C409.229 217.21 391.89 240.467 368.516 246.582C359.275 248.999 346.801 247.906 337.539 243.867C328.417 239.889 316.516 229.482 310.732 220.425C305.231 211.809 298.836 195.641 298.647 189.868C298.597 188.354 298.578 188.352 297.97 189.768C297.626 190.568 297.322 192.388 297.294 193.812C297.266 195.237 296.566 198.988 295.738 202.148C289.6 225.583 276.058 241.767 257.313 248.075C250.369 250.412 239.54 250.998 232.568 249.414C226.717 248.084 218.377 244.159 212.512 239.974C200.839 231.644 190.925 216.268 186.237 199.222C184.372 192.439 184.237 190.995 184.239 177.768C184.241 164.678 184.391 163.029 186.188 156.365C192.408 133.292 208.064 116.144 227.421 111.204C237.221 108.703 249.16 109.953 259.271 114.537C276.646 122.416 291.5 142.38 296.033 163.949L297.027 168.677L297.515 165.768C301.135 144.153 306.241 133.051 317.955 121.33C323.491 115.791 325.696 114.152 331.468 111.287ZM248.482 119.932C243.42 118.584 234.004 118.576 228.975 119.915C212.954 124.179 199.72 139.193 194.648 158.858C192.633 166.672 191.947 181.281 193.222 189.238C197.354 215.03 213.54 235.544 233.816 240.685C239.506 242.128 249.038 241.65 255.062 239.619C276.258 232.472 290.354 207.378 288.989 179.222C287.594 150.425 270.822 125.877 248.482 119.932ZM352.824 115.222C336.062 115.222 322.302 124.749 313.398 142.518C303.535 162.205 303.829 187.87 314.157 208.677C321.112 222.688 334.189 234.322 346.788 237.711C352.115 239.144 362.213 239.137 367.111 237.697C388.905 231.292 403.479 208.384 403.618 180.313C403.721 159.54 396.956 141.969 383.87 129.026C373.973 119.237 364.943 115.222 352.824 115.222Z"
-            fill="black" />
-        </svg>
-      </div>
-      <nav class="hero-subnav">
-        <a href="#terapie">Psychoterapie a poradenství</a>
-        <a href="#supervize">Supervize</a>
-      </nav>
-    </section>
-  </main>
-  <svg width="100%" height="100%" id="svg" viewBox="0 120 1440 150" xmlns="http://www.w3.org/2000/svg"
-    class="transition duration-300 ease-in-out delay-150"
-    style="margin:0; padding:0; background: linear-gradient(180deg,rgba(245, 244, 230, 1) 0%, rgba(184, 194, 167, 1) 99%);">
-    <path
-      d="M 0,500 L 0,187 C 192.53333333333336,153.39999999999998 385.0666666666667,119.79999999999998 563,142 C 740.9333333333333,164.20000000000002 904.2666666666667,242.2 1048,259 C 1191.7333333333333,275.8 1315.8666666666668,231.4 1440,187 L 1440,500 L 0,500 Z"
-      stroke="none" stroke-width="0" fill="#b8c2a7" fill-opacity="1"
-      class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-  </svg>
-  <section class="section-green" id="terapie">
-    <div class="section-content">
-      <h2>Psychoterapie a poradenství</h2>
-
-      <p>„Své klienty vnímám jako experty na svůj život. Mojí úlohou je vytvářet bezpečný prostor, kde mohou objevovat
-        možnosti a řešení, která pro ně fungují.“</p>
-
-      <p>Ve své praxi se věnuji psychologickému poradenství a terapii. Nabízím bezpečný prostor, kde můžete otevřeně
-        mluvit o svých tématech a hledat cestu k větší spokojenosti a rovnováze.
-      </p>
-
-      <h3>S čím se na mě můžete obrátit?</h3>
-      <ul>
-        <li>Osobní rozvoj a vztah k sobě samému</li>
-        <li>Pracovní uplatnění a životní orientace</li>
-        <li>Partnerské a rodinné vztahy</li>
-        <li>Dlouhodobá nespokojenost, ztráta motivace a energie</li>
-        <li>Konflikty v partnerství, rodičovství či na pracovišti</li>
-        <li>Psychické obtíže: smutek, deprese, úzkosti, panické stavy, problémy se zvládáním emocí, následky
-          traumatických událostí, …</li>
-
-      </ul>
-      <p class="center-cap-text">Jsem členkou České asociace pro psychoterapii (ČAP).</p>
-      <div class="cap-photo">
-        <img src="cap.png" alt="Česká asociace pro terapii" />
-      </div>
-
+    <header style="text-align: center; padding: clamp(88px, 12vw, 168px) 0 clamp(96px, 13vw, 184px); display: flex; flex-direction: column; align-items: center; gap: 32px">
+    <span style="font-size: 14px; color: var(--muted)">Mgr. Jana Kohnová</span>
+    <h1 style="margin: 0; max-width: 1000px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(48px, 8vw, 108px); line-height: 0.95; letter-spacing: -0.025em">Psychologické poradenství a&#160;diagnostika<br><em>Poradenská psychoterapie</em></h1>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; font-size: 15px">
+      <a href="#terapie" style="padding: 13px 22px; border-radius: 999px; background: var(--ink); color: var(--bg)">Psychoterapie a&#160;poradenství</a>
+      <a href="#supervize" style="padding: 13px 22px; border-radius: 999px; border: 1px solid var(--ink)">Supervize</a>
     </div>
+  </header>
 
-
+    <section id="terapie" style="display: flex; flex-direction: column; gap: 56px; padding-bottom: clamp(104px, 12vw, 168px)">
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
+      <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -0.02em">Psychoterapie <em>a&#160;poradenství</em></h2>
+      <blockquote style="margin: 0; max-width: 820px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(21px, 2.4vw, 27px); line-height: 1.45">„Své klienty vnímám jako experty na svůj život. Mojí úlohou je vytvářet bezpečný prostor, kde mohou objevovat možnosti a&#160;řešení, která pro ně fungují.“</blockquote>
+      <p style="margin: 0; max-width: 620px">Ve své praxi se věnuji psychologickému poradenství a&#160;terapii. Nabízím bezpečný prostor, kde můžete otevřeně mluvit o&#160;svých tématech a&#160;hledat cestu k&#160;větší spokojenosti a&#160;rovnováze.</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 32px 64px">
+      <h3 style="flex: 1 1 280px; margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(30px, 3.2vw, 40px); line-height: 1.1">S&#160;čím se na mě můžete obrátit?</h3>
+      <ul style="flex: 2 1 520px; margin: 0; padding: 0; list-style: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.45">
+        <li style="padding: 14px 0; border-top: 1px solid var(--line)">Osobní rozvoj a&#160;vztah k&#160;sobě samému</li>
+        <li style="padding: 14px 0; border-top: 1px solid var(--line)">Pracovní uplatnění a&#160;životní orientace</li>
+        <li style="padding: 14px 0; border-top: 1px solid var(--line)">Partnerské a&#160;rodinné vztahy</li>
+        <li style="padding: 14px 0; border-top: 1px solid var(--line)">Dlouhodobá nespokojenost, ztráta motivace a&#160;energie</li>
+        <li style="padding: 14px 0; border-top: 1px solid var(--line)">Konflikty v&#160;partnerství, rodičovství či na pracovišti</li>
+        <li style="padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">Psychické obtíže: smutek, deprese, úzkosti, panické stavy, problémy se zvládáním emocí, následky traumatických událostí, …</li>
+      </ul>
+    </div>
+    <a href="https://czap.cz/Sys/PublicProfile/61043430" style="align-self: center; display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--muted)">
+      <img src="cap.png" alt="Logo ČAP" style="width: 36px; height: 36px; border-radius: 999px; background: #FFFFFF; object-fit: contain">
+      Jsem členkou České asociace pro psychoterapii (ČAP).
+    </a>
   </section>
+</div>
 
-  <svg width="100%" height="auto" id="svg" viewBox="0 78 1440 152" xmlns="http://www.w3.org/2000/svg"
-    class="transition duration-300 ease-in-out delay-150"
-    style="margin:0; padding:0; background: linear-gradient(180deg,rgba(184, 194, 167, 1) 0%, rgba(205, 197, 176, 1) 49%, rgba(205, 197, 176, 1) 100%);">
-    <path
-      d="M0,224L80,218.7C160,213,320,203,480,170.7C640,139,800,85,960,80C1120,75,1280,117,1360,138.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      stroke="none" stroke-width="0" fill="#CDC5B0" ; fill-opacity="1"
-      class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-  </svg>
-
-  <section class="section-brown seminars" id="supervize">
-    <div class="seminars-inner section-content">
-      <div class="section-svg-icon">
-        <svg width="520" height="520" viewBox="0 0 524 541" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="524" height="541" fill="none" />
-          <path
-            d="M115.395 430.638C114.638 429.783 114.111 427.097 113.79 422.456C113.527 418.656 113.008 412.438 112.636 408.638C110.715 388.96 109.659 369.129 110.099 361.001C112.191 322.417 117.072 303.402 128.209 290.456C130.273 288.056 133.814 283.801 136.077 281.001C141.606 274.16 144.675 271.324 151.568 266.688C157.825 262.48 169.519 257.485 178.641 255.124C187.24 252.899 199.992 251.948 208.222 252.919C219.186 254.212 229.88 257.949 239.541 263.863C251.72 271.318 258.127 274.329 271.279 278.778L283.105 282.779L286.427 280.096C288.255 278.621 289.914 277.22 290.114 276.982C291.129 275.773 305.076 269.648 310.477 268.037C320.195 265.141 324.724 264.461 334.477 264.432C341.568 264.411 344.905 264.756 349.642 266C357.331 268.019 363.549 270.533 368.711 273.709L372.763 276.203L377.321 274.784C396.23 268.899 414.668 281.857 419.283 304.274C420.7 311.158 420.344 322.864 418.508 329.729C417.073 335.091 413.034 343.777 409.905 348.225L407.568 351.547L408.018 359.91C408.265 364.51 408.511 376.947 408.564 387.547C408.681 410.864 407.364 423.296 404.582 425.119C403.298 425.96 402.601 426.015 401.394 425.369C399.18 424.184 398.683 422.209 399.321 417.117C401.317 401.162 401.507 395.631 400.634 378.893C400.146 369.534 399.543 360.235 399.294 358.229L398.841 354.581L394.397 353.676C387.995 352.372 384.215 350.185 378.728 344.612C375.112 340.94 373.041 337.976 370.539 332.894C365.485 322.629 364.087 316.489 364.022 304.274C363.969 294.417 364.098 293.498 366.891 283.782C367.263 282.49 366.766 281.828 364.185 280.174C359.634 277.258 348.594 273.563 341.445 272.563C325.83 270.379 304.771 276.206 290.72 286.599C281.217 293.629 270.535 308.3 266.795 319.459C261.855 334.199 259.806 362.101 261.793 387.547C262.215 392.947 262.661 399.656 262.784 402.456C262.907 405.256 263.256 411.31 263.559 415.91C264.09 423.95 264.05 424.329 262.518 425.704C261.054 427.017 260.763 427.045 258.973 426.042C257.219 425.06 256.972 424.405 256.517 419.521C252.995 381.74 252.404 367.236 253.721 350.896C254.531 340.852 254.509 339.33 253.539 338.24C251.806 336.292 250.29 330.051 250.884 327.306C251.5 324.463 254.751 320.806 256.941 320.493C258.143 320.322 258.882 319.085 260.332 314.82C262.774 307.638 263.988 305.453 268.538 300.061C273.595 294.066 276.563 290.107 276.215 289.816C276.059 289.685 272.005 288.198 267.205 286.511C257.714 283.176 247.041 278.058 238.494 272.745C232.644 269.109 231.641 268.662 220.821 264.875C210.97 261.426 203.579 260.538 193.246 261.563C175.156 263.356 157.97 270.772 145.935 281.981C138.638 288.776 127.559 305.48 124.983 313.57C122.601 321.05 120.752 333.539 119.462 350.858C118.189 367.955 118.413 375.172 121.416 413.729C122.402 426.385 122.323 429.416 120.971 430.768C119.457 432.281 116.794 432.219 115.395 430.638ZM403.061 341.734C410.113 333.892 413.42 317.313 410.449 304.705C407.347 291.548 397.487 282.083 386.893 282.096C378.501 282.107 374.649 285.816 372.972 295.503C369.776 313.961 378.669 337.164 391.364 343.49C397.134 346.365 399.173 346.059 403.061 341.734ZM330.477 248.294C310.871 244 294.58 226.272 288.1 202.179C286.425 195.949 286.219 193.831 286.219 182.82C286.219 171.761 286.421 169.705 288.13 163.343C293.603 142.974 307.392 127.512 324.659 122.381C330.52 120.639 341.346 120.639 347.205 122.381C363.423 127.204 377.506 140.927 384.428 158.652C385.401 161.144 386.486 163.838 386.839 164.638C388.748 168.967 389.934 180.644 389.522 191.062C389.004 204.149 386.875 212.251 381.272 222.449C370.3 242.423 350.25 252.624 330.477 248.294ZM347.784 240.282C364.226 235.999 376.386 221.472 380.662 201.001C382.073 194.245 382.043 180.904 380.601 173.924C377.985 161.258 372.28 149.931 364.569 142.096C343.036 120.216 312.057 126.78 299.154 155.956C293.982 167.65 292.371 183.436 295.037 196.284C301.317 226.546 324.923 246.236 347.784 240.282ZM201.75 235.832C188.246 234.107 178.067 228.853 167.853 218.336C152.997 203.039 145.354 181.742 146.363 158.456C147.254 137.885 154.727 120.465 168.03 107.95C190.095 87.1937 221.55 89.8507 242.573 114.247C248.414 121.025 253.526 129.867 256.36 138.092C257.118 140.292 257.917 142.256 258.135 142.456C258.631 142.909 260.819 156.452 261.435 162.881C262.111 169.941 260.55 183.173 258.086 191.254C250.142 217.315 231.642 234.088 209.023 235.739C206.223 235.943 202.95 235.985 201.75 235.832ZM215.982 225.659C245.909 216.863 260.942 176.822 247.876 140.711C241.459 122.976 227.65 108.842 212.345 104.344C206.662 102.674 196.186 102.81 190.372 104.63C161.999 113.513 147.321 152.702 159.279 187.648C165.697 206.404 180.138 221.498 195.658 225.672C200.986 227.105 211.083 227.098 215.982 225.659Z"
-            fill="black" />
-        </svg>
+    <section id="supervize" style="background: var(--ink); color: var(--bg)">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(88px, 10vw, 144px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
+        <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -0.02em">Supervize</h2>
+        <p style="margin: 0; max-width: 680px">Supervizi vnímám jako kolegiální prostor pro reflektivní prožitek vaší profesní praxe, objevování nových perspektiv a&#160;podporu osobního i&#160;odborného růstu. Umožňuje sdílet zkušenosti, zpracovávat náročné situace a&#160;nacházet cesty, které jsou v&#160;souladu s&#160;vaší profesní identitou.</p>
       </div>
-      <h2>Supervize</h2>
-      <p>
-        Supervizi vnímám jako kolegiální prostor pro reflektivní prožitek vaší profesní praxe, objevování nových
-        perspektiv a podporu osobního i odborného růstu. Umožňuje sdílet zkušenosti, zpracovávat náročné situace a
-        nacházet cesty, které jsou v souladu s vaší profesní identitou.
-      </p>
-      <h3>Nabízím spolupráci formou:</h3>
-      <ul>
-        <li><strong>Individuální supervize </strong> – zaměřenou na osobní profesní témata, rozvoj dovedností a podporu
-          při náročných situacích.</li>
-        <li><strong>Skupinové supervize</strong> – umožňující bohatší kolegiální inspiraci a spolupráci</li>
-        <li><strong>Týmové supervize</strong> – podporující spolupráci, sdílení zkušeností a hlubší porozumění týmovým
-          procesům.</li>
-
-      </ul>
-      <h3>Supervize může probíhat jako:</h3>
-      <ul>
-        <li><strong>Případová supervize </strong> – zaměřené na konkrétní klientské situace</li>
-        <li><strong>Profesně rozvojová supervize </strong> – směřující k dlouhodobému profesnímu růstu, prevenci
-          vyhoření a rozvoji vaší terapeutické praxe.</li>
-      </ul>
-      <p>
-        Je určena psychologům, terapeutům, pedagogům a dalším odborníkům v pomáhajících profesích, kteří chtějí
-        prohlubovat svou profesní praxi a zároveň se vědomě rozvíjet.
-      </p>
-      <p class="center-cap-text">Jsem supervizorka zapsaná v registru ČAP.</p>
-      <div class="cap-photo">
-        <img src="cap.png" alt="Česká asociace pro terapii" />
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <h3 style="margin: 0; font-size: 14px; font-weight: 400; color: var(--bg); opacity: 0.8">Nabízím spolupráci formou</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 40px">
+          <div style="padding-top: 16px; border-top: 1px solid var(--bg); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; line-height: 1.3">Individuální supervize</span><span style="font-size: 16px; color: var(--bg); opacity: 0.8">Zaměřenou na osobní profesní témata, rozvoj dovedností a&#160;podporu při náročných situacích.</span></div>
+          <div style="padding-top: 16px; border-top: 1px solid var(--bg); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; line-height: 1.3">Skupinové supervize</span><span style="font-size: 16px; color: var(--bg); opacity: 0.8">Umožňující bohatší kolegiální inspiraci a&#160;spolupráci.</span></div>
+          <div style="padding-top: 16px; border-top: 1px solid var(--bg); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; line-height: 1.3">Týmové supervize</span><span style="font-size: 16px; color: var(--bg); opacity: 0.8">Podporující spolupráci, sdílení zkušeností a&#160;hlubší porozumění týmovým procesům.</span></div>
+        </div>
       </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <h3 style="margin: 0; font-size: 14px; font-weight: 400; color: var(--bg); opacity: 0.8">Supervize může probíhat jako</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 40px">
+          <div style="padding-top: 16px; border-top: 1px solid var(--bg); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; line-height: 1.3">Případová supervize</span><span style="font-size: 16px; color: var(--bg); opacity: 0.8">Zaměřené na konkrétní klientské situace.</span></div>
+          <div style="padding-top: 16px; border-top: 1px solid var(--bg); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; line-height: 1.3">Profesně rozvojová supervize</span><span style="font-size: 16px; color: var(--bg); opacity: 0.8">Směřující k&#160;dlouhodobému profesnímu růstu, prevenci vyhoření a&#160;rozvoji vaší terapeutické praxe.</span></div>
+          <p style="margin: 0; padding-top: 16px; border-top: 1px solid var(--bg); font-size: 16px">Je určena psychologům, terapeutům, pedagogům a&#160;dalším odborníkům v&#160;pomáhajících profesích, kteří chtějí prohlubovat svou profesní praxi a&#160;zároveň se vědomě rozvíjet.</p>
+        </div>
+      </div>
+      <a href="https://czap.cz/Sys/PublicProfile/61043430" style="align-self: center; display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--bg); opacity: 0.8">
+        <img src="cap.png" alt="Logo ČAP" style="width: 36px; height: 36px; border-radius: 999px; background: #FFFFFF; object-fit: contain">
+        Jsem supervizorka zapsaná v&#160;registru ČAP.
+      </a>
     </div>
   </section>
 
-  <script>
-    document.addEventListener('click', async (e) => {
-      const btn = e.target.closest('#copyEmailBtn');
-      if (!btn) return;
-      e.preventDefault();
-      const email = btn.dataset.email || btn.textContent.trim();
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px)">
 
-      try {
-        await navigator.clipboard.writeText(email);
-        const orig = btn.innerHTML;
+    <section id="omne" style="padding: clamp(104px, 12vw, 168px) 0; display: flex; flex-direction: column; gap: 80px">
+    <div style="display: flex; flex-wrap: wrap; gap: 48px clamp(40px, 6vw, 96px); align-items: flex-start">
+      <div style="flex: 1 1 300px; max-width: 420px; display: flex; flex-direction: column; gap: 28px">
+        <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -0.02em">O&#160;<em>mně</em></h2>
+        <img src="pfp.jpg" alt="Mgr. Jana Kohnová" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 210px 210px 0 0">
+      </div>
+      <div style="flex: 1.4 1 460px; display: flex; flex-direction: column; gap: 64px; padding-top: 8px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(30px, 3vw, 38px); line-height: 1.1">Vzdělání</h3>
+        <ul style="margin: 0; padding: 0; list-style: none">
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">1995–2000</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Vysokoškolské vzdělání</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Trnavská univerzita v&#160;Trnave, magisterský titul v&#160;oboru psychologie</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2001–2006</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Psychoterapeutický výcvik</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">IGT Praha, Gestalt terapie</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2011–2013</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Postgraduální kurz v&#160;gestalt terapii</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">IGT Praha, Gestalt přístup v&#160;klinické praxi</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2022</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Dialog, Gestalt studia: Lynne Jacobs</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Dialogický přístup v&#160;Gestalt terapii</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2024–2026</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Supervizní výcvik v&#160;gestalt modalitě</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Gestalt plus, s.r.o.</span></span>
+          </li>
+        </ul>
+        <p style="margin: 4px 0 0; font-size: 15px; color: var(--muted)">… a další kurzy, workshopy, přednášky v&#160;rámci kontinuálního vzdělávání (v&#160;oblasti poruchy příjmu potravy, práce v&#160;pískovišti, neurověd,..)</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(30px, 3vw, 38px); line-height: 1.1">Odborná praxe</h3>
+        <ul style="margin: 0; padding: 0; list-style: none">
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2013 – dosud</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">OSVČ</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Psychologické poradenství, terapie a&#160;diagnostika, poradenská psychoterapie</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2020 – dosud</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Akropolis z.s, Uherské Hradiště</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Spolupráce v&#160;rámci projektu Rodina</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2018 – 2020</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">ZDVOP Zlín</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Supervize</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2016 – 2017</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">MÚ Uherské Hradiště, OSPOD</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Psychologické poradenství, terapie, diagnostika</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2006 – 2022</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Elio, z.s., Praha</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Lektorská činnost, supervize, metodická činnost. Vedoucí týmu. Psychologické poradenství, terapie a&#160;diagnostika.</span></span>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 56px clamp(40px, 6vw, 96px)">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(30px, 3vw, 38px); line-height: 1.1">Publikační činnost</h3>
+        <ul style="margin: 0; padding: 0; list-style: none">
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2013</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35"><em>Nejsme na to sami</em></span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Kohnová, J., Nováčková, M., Irrová, L., Pejchalová, M., Praha, Elio</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2012</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Mezinárodní konference pozitivní psychologie v&#160;ČR, Brno</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Zkušenosti s&#160;využíváním pozitivní psychologie</span></span>
+          </li>
+          <li style="display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+            <span style="font-size: 14px; font-weight: 500; padding-top: 4px; white-space: nowrap">2012</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.35">Krajská konference primární prevence rizikového chování, České Budějovice</span><span style="font-size: 15px; line-height: 1.45; color: var(--muted)">Prevence jako komplexní a&#160;kontinuální činnost</span></span>
+          </li>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(30px, 3vw, 38px); line-height: 1.1">Aktuální spolupráce</h3>
+        <p style="margin: 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 16px">Spolupracuji s&#160;organizacemi a&#160;pojišťovnami, které podporují psychologickou pomoc a&#160;poradenství.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px">
+          <a href="https://czap.cz/Sys/PublicProfile/61043430" style="padding: 10px 16px; border: 1px solid var(--ink); border-radius: 999px">Řádné členství v&#160;ČAP ↗</a>
+          <a href="https://www.akropolis-uh.cz/psychlogicka-poradna-pomoc-pro-deti" style="padding: 10px 16px; border: 1px solid var(--ink); border-radius: 999px">Akropolis, z.s. – Psychologická poradna ↗</a>
+          <a href="https://czap.cz/spoluprace-zp" style="padding: 10px 16px; border: 1px solid var(--ink); border-radius: 999px">Spolupráce s&#160;pojišťovnami ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        const copiedIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.985 511.985" width="16" height="16" style="vertical-align:middle;margin-left:6px;">
-          <path d="M500.088 83.681c-15.841-15.862-41.564-15.852-57.426 0L184.205 342.148 69.332 227.276c-15.862-15.862-41.574-15.862-57.436 0-15.862 15.862-15.862 41.574 0 57.436l143.585 143.585c7.926 7.926 18.319 11.899 28.713 11.899 10.394 0 20.797-3.963 28.723-11.899l287.171-287.181c15.862-15.851 15.862-41.574 0-57.435z" fill="#ffffff"/>
-        </svg>`;
+    <section id="cenik" style="padding-bottom: clamp(104px, 12vw, 168px); display: flex; flex-direction: column; gap: 48px">
+    <h2 style="margin: 0; text-align: center; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(56px, 8vw, 120px); line-height: 0.9; letter-spacing: -0.03em">Ceník</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+      <div style="padding: 24px; background: var(--surface); border-radius: 24px; display: flex; flex-direction: column; gap: 20px"><span style="font-size: 15px">Individuální konzultace</span><span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1">1&nbsp;200&nbsp;Kč</span> <span style="font-size: 14px; color: var(--muted)">/ 50 min</span></span></div>
+      <div style="padding: 24px; background: var(--surface); border-radius: 24px; display: flex; flex-direction: column; gap: 20px"><span style="font-size: 15px">Párová konzultace</span><span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1">1&nbsp;200&nbsp;Kč</span> <span style="font-size: 14px; color: var(--muted)">/ 50 min</span></span></div>
+      <div style="padding: 24px; background: var(--surface); border-radius: 24px; display: flex; flex-direction: column; gap: 20px"><span style="font-size: 15px">Rodinná konzultace</span><span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1">1&nbsp;200&nbsp;Kč</span> <span style="font-size: 14px; color: var(--muted)">/ 50 min</span></span></div>
+      <div style="padding: 24px; background: var(--surface); border-radius: 24px; display: flex; flex-direction: column; gap: 20px"><span style="font-size: 15px">Supervize</span><span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1">1&nbsp;500&nbsp;Kč</span> <span style="font-size: 14px; color: var(--muted)">/ 50 min</span></span></div>
+      <div style="padding: 24px; background: var(--surface); border-radius: 24px; display: flex; flex-direction: column; gap: 20px"><span style="font-size: 15px">Vyhotovení zprávy</span><span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1">1&nbsp;000&nbsp;Kč</span></span></div>
+    </div>
+    <p style="margin: 0; text-align: center; font-size: 17px">Terapie i&nbsp;supervize probíhají formou osobního setkání nebo on-line.</p>
 
-        btn.innerHTML = `Zkopírováno ${copiedIcon}`;
+    <div style="display: flex; flex-wrap: wrap; gap: 16px">
+      <div style="flex: 1 1 360px; padding: 28px; border: 1px solid var(--ink); border-radius: 24px; display: flex; flex-direction: column; gap: 18px">
+        <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 32px; line-height: 1.05">Platba na účet</h3>
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: var(--muted)">Číslo účtu</span><span style="font-size: 18px; font-weight: 500">670100-2210671135 / 6210</span></div>
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: var(--muted)">IBAN</span><span style="font-size: 18px; font-weight: 500">CZ98 6210 6701 0022 1067 1135</span></div>
+      </div>
+      <div style="flex: 2 1 520px; padding: 28px; border: 1px solid var(--ink); border-radius: 24px; display: flex; flex-direction: column; gap: 16px">
+        <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 32px; line-height: 1.05">Spolupráce s&nbsp;pojišťovnami</h3>
+        <p style="margin: 0; font-size: 15px">Příspěvek na psychoterapii poskytují tyto pojišťovny:</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 24px; font-size: 14px">
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line)"><strong style="font-weight: 500">VZP-111</strong> Všeobecná zdravotní pojišťovna</li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line)"><strong style="font-weight: 500">ČPZP-205</strong> Česká průmyslová zdravotní pojišťovna</li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line)"><strong style="font-weight: 500">OZP-207</strong> Oborová zdravotní pojišťovna</li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line)"><strong style="font-weight: 500">ZP Škoda-209</strong> Zaměstnanecká pojišťovna Škoda</li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line)"><strong style="font-weight: 500">ZPMV-211</strong> Zdravotní pojišťovna ministerstva vnitra České republiky</li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line)"><strong style="font-weight: 500">RBP-213</strong> Revírní bratrská pokladna, zdravotní pojišťovna</li>
+        </ul>
+        <p style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.4">Příspěvky se pohybují řádově od 2–5&nbsp;tis.&nbsp;Kč ročně.</p>
+      </div>
+    </div>
 
-        setTimeout(() => btn.innerHTML = orig, 800);
-        return;
-      } catch (err) {
+    <div style="display: flex; flex-wrap: wrap; gap: 16px 48px; padding-top: 18px; border-top: 1px solid var(--line)">
+      <h3 style="flex: 0 1 240px; margin: 0; font-size: 13px; font-weight: 500; color: var(--muted)">Storno podmínky</h3>
+      <p style="flex: 1 1 520px; margin: 0; font-size: 14px; line-height: 1.55; color: var(--muted)">Pokud zrušíte nebo přesunete domluvený termín méně než 48 hodin před jeho začátkem, případně se na terapii nedostavíte, bude účtován storno poplatek ve výši 100&nbsp;% ceny sjednané konzultace. Tento poplatek je účtován proto, že takto uvolněný termín již nelze nabídnout dalším klientům.</p>
+    </div>
+  </section>
 
-      }
+    <section id="kontakt" style="padding: clamp(40px, 6vw, 80px) 0 clamp(96px, 11vw, 152px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px">
+    <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(56px, 8.5vw, 120px); line-height: 0.95; letter-spacing: -0.025em">Kontakt</h2>
+    <p style="margin: 0; max-width: 560px">Pro objednání pište/volejte na +420&#160;775&#160;200&#160;565 nebo pište na jana.kohnova@gmail.com. K&#160;dispozici je také WhatsApp.</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; font-size: 16px">
+      <a href="mailto:jana.kohnova@gmail.com" style="padding: 15px 26px; border-radius: 999px; background: var(--ink); color: var(--bg)">jana.kohnova@gmail.com</a>
+      <a href="tel:+420775200565" style="padding: 15px 26px; border-radius: 999px; border: 1px solid var(--ink)">+420 775 200 565</a>
+    </div>
+    <div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 40px; text-align: left; margin-top: 32px">
+      <div style="padding-top: 16px; border-top: 1px solid var(--ink); display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; color: var(--muted)">Adresa</span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.4">Poštovní 252<br>686 01 Uherské Hradiště</span><span style="font-size: 14px; color: var(--muted)">Zlínský kraj, Česká republika</span></div>
+      <div style="padding-top: 16px; border-top: 1px solid var(--ink); display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; color: var(--muted)">Mgr. Jana Kohnová</span><span style="font-size: 15px">IČO: 01807404</span><span style="font-size: 15px">Datová schránka: a46fwqx</span></div>
+      <a href="https://czap.cz/Sys/PublicProfile/61043430" style="padding-top: 16px; border-top: 1px solid var(--ink); display: flex; align-items: center; gap: 14px">
+        <img src="cap.png" alt="Logo ČAP" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; object-fit: contain; flex: none">
+        <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 500; line-height: 1.35">Členka České asociace pro psychoterapii (ČAP)</span><span style="font-size: 13px; color: var(--muted)">Profil na czap.cz ↗</span></span>
+      </a>
+    </div>
+  </section>
 
-      const ta = document.createElement('textarea');
-      ta.value = email;
-      ta.style.position = 'fixed';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); } catch (e) { }
-      document.body.removeChild(ta);
-    });
-  </script>
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    hamburger.addEventListener('click', function () {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      document.body.classList.toggle('menu-open');
-    });
-
-
-    const mobileLinks = document.querySelectorAll('.mobile-menu a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-
-        if (this.id === 'copyEmailBtn' || this.classList.contains('copyEmail')) {
-          return;
-        }
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('menu-open');
-      });
-    });
-
-
-    function animateOnScroll() {
-      const animatedElements = document.querySelectorAll('[data-animation-delay]');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const delay = entry.target.getAttribute('data-animation-delay');
-            setTimeout(() => {
-              entry.target.style.opacity = '1';
-              entry.target.style.transform = 'translateY(0)';
-            }, parseFloat(delay) * 1000);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      });
-
-      animatedElements.forEach(el => {
-        observer.observe(el);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const heroElements = document.querySelectorAll('.main-hero *');
-      heroElements.forEach((element, index) => {
-        setTimeout(() => {
-          element.style.opacity = '1';
-          element.style.transform = 'translateY(0)';
-        }, (index + 1) * 200);
-      });
-
-
-      animateOnScroll();
-    });
-
-
-
-  </script>
-  <script>
-    const scrollUpBtn = document.getElementById('scrollUpBtn');
-
-    function onScroll() {
-      if (window.scrollY > 300) {
-        scrollUpBtn.classList.add('show');
-      } else {
-        scrollUpBtn.classList.remove('show');
-      }
-    }
-
-    window.addEventListener('scroll', onScroll);
-
-    scrollUpBtn.addEventListener('click', () => {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-    });
-  </script>
-  <script>
-    // Kolečko s domečkem: na úvodní stránce vrátí nahoru (jinak by odkazovalo samo na sebe)
-    document.querySelector('.fixed-logo').addEventListener('click', (e) => {
-      e.preventDefault();
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-    });
-  </script>
-
+  <footer style="padding: 20px 0 32px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--muted)">
+    <span>Všechna práva vyhrazena © 2026. Jana Kohnová.</span>
+    <a href="#">Nahoru ↑</a>
+  </footer>
+</div>
+</div>
 </body>
-<footer class="footer">
-  <p class="footer-text">Všechna práva vyhrazena © 2026. Jana Kohnová.</p>
-</footer>
-
 </html>
