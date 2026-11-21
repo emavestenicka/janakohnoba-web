@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   background-color: #F5F4E6;
   color: #23281C;
 }
@@ -96,13 +95,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   position: relative;
 }
 
 .main-title {
   font-size: 2.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: bold;
   margin: 0 0 20px 0;
   letter-spacing: -0.5px;
@@ -161,7 +160,7 @@ body {
 .section-green h2 {
   font-size: 2rem;
   margin-bottom: 24px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   color: #23281C;
   text-align: center
@@ -211,7 +210,7 @@ body {
 
 
 .section-brown h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 2.2rem;
   margin-bottom: 28px;
   text-align: center;
@@ -219,7 +218,7 @@ body {
 }
 
 .section-beige h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 2.2rem;
   margin-bottom: 28px;
 }
@@ -523,7 +522,7 @@ button:hover, input[type="submit"]:hover {
 } 
 .section-content p {
   text-align: left !important;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: calc(13px + (21 - 14) * ((100vw - 375px) / (1600 - 375))); 
   line-height: 2.1;
   color: #23281C;
@@ -533,7 +532,7 @@ button:hover, input[type="submit"]:hover {
 .section-content ul li {
   padding-bottom:10px;
   font-size: calc(12px + (21 - 14) * ((100vw - 375px) / (1600 - 375))) !important;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -607,7 +606,7 @@ button:hover, input[type="submit"]:hover {
   margin-left: 0;
   margin-right: auto;
   font-size: calc(15px + (21 - 14) * ((100vw - 375px) / (1600 - 375)));
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   line-height: 1.8125rem;
   color: #23281C;
@@ -648,7 +647,7 @@ button:hover, input[type="submit"]:hover {
   border-radius: 12px;
   margin: 0 0 10px 0;
   padding: 14px 0;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   letter-spacing: 0.01em;
   display: flex;
@@ -736,7 +735,7 @@ button:hover, input[type="submit"]:hover {
 .footer-text {
   font-size: 0.9rem;
   color: #23281C; 
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
 }
 
 @media (max-width: 768px) {
@@ -759,7 +758,7 @@ button:hover, input[type="submit"]:hover {
   gap: 0.5rem;
   justify-content: center;
   font-size: 1rem;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.4s ease-out forwards;
@@ -775,7 +774,7 @@ button:hover, input[type="submit"]:hover {
   margin: 0;
   border-radius: 0;
   font-weight: 100;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   transition: color 0.3s;
   letter-spacing: 0.01em;
 }
@@ -852,7 +851,7 @@ button:hover, input[type="submit"]:hover {
 
   font-size: 2.2rem;
   margin-bottom: 28px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   line-height: 1.8125rem;
 }

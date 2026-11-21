@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
 
   color: #23281C;
 }
@@ -101,13 +100,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   position: relative;
 }
 
 .main-title {
   font-size: 2.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: bold;
   margin: 0 0 20px 0;
   letter-spacing: -0.5px;
@@ -166,7 +165,7 @@ body {
 .section-green h2 {
   font-size: 2rem;
   margin-bottom: 24px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   color: white;
   text-align: center
@@ -216,14 +215,14 @@ body {
 
 
 .section-brown h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 2.2rem;
   margin-bottom: 28px;
   text-align: center;
 }
 
 .section-beige h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 2.2rem;
   margin-bottom: 28px;
 }
@@ -528,7 +527,7 @@ body.contact-page {
   max-width: 700px;
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
 }
-/* font-family: 'Lato', sans-serif;
+/* font-family: var(--font-body);
 font-size: 2.5rem;
 font-weight: 500;
 line-height: 1.8125rem;
@@ -537,14 +536,14 @@ letter-spacing: -0.5px;
 text-align: center;
 color: #323522; */
 .contact-block__title {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 2.2rem !important;
   font-weight:500;
   margin-bottom: 24px;
 }
 
 .contact-block__subtitle{
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: calc(13px + (21 - 14) * ((100vw - 375px) / (1600 - 375))) !important;
   font-weight: 500;
   margin-bottom: 24px;
@@ -709,7 +708,7 @@ color: #323522; */
 .section-green.contact-block .contact-block__item {
 
   font-size: 1.18rem;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   letter-spacing: 0.01em;
   margin: 0 0 18px 0;
@@ -867,7 +866,7 @@ color: #323522; */
   max-width: 400px;
   color: #fff;
   font-size: 1.2rem;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   gap: 30px;
   cursor: pointer;
@@ -1077,7 +1076,7 @@ color: #323522; */
 .footer-text {
   font-size: 0.9rem;
   color: #ECE9D8; 
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
 }
 
 @media (max-width: 768px) {
@@ -1101,7 +1100,7 @@ color: #323522; */
   gap: 0.5rem;
   justify-content: center;
   font-size: 1rem;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.4s ease-out forwards;

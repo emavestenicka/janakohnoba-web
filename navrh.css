@@ -4,7 +4,6 @@
            světlý písek #E6E3D2 · tmavá oliva #323522 · text #23281C
    =========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 :root {
   --cream: #F5F4E6;
@@ -19,7 +18,7 @@
 .band {
   position: relative;
   padding: 90px 24px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   color: var(--ink);
 }
 
@@ -51,7 +50,7 @@
 /* ---------- nadpisy ---------- */
 .band-title {
   margin: 0 0 28px 0;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: clamp(2rem, 4.2vw, 3.1rem);
   line-height: 1.15;
@@ -244,7 +243,7 @@
 
 .card h3 {
   margin: 0 0 12px 0;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.3;
