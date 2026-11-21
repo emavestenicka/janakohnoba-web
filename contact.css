@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 body {
   margin: 0;
@@ -102,13 +101,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   position: relative;
 }
 
 .main-title {
   font-size: 2.5rem;
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
   margin: 0 0 20px 0;
   letter-spacing: -0.5px;
@@ -167,7 +166,7 @@ body {
 .section-green h2 {
   font-size: 2rem;
   margin-bottom: 24px;
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: white;
   text-align: center
@@ -217,14 +216,14 @@ body {
 
 
 .section-brown h2 {
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-size: 2.2rem;
   margin-bottom: 28px;
   text-align: center;
 }
 
 .section-beige h2 {
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-size: 2.2rem;
   margin-bottom: 28px;
 }
@@ -529,7 +528,7 @@ body.contact-page {
   max-width: 700px;
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
 }
-/* font-family: "Gazpacho" !important;
+/* font-family: 'Lato', sans-serif;
 font-size: 2.5rem;
 font-weight: 500;
 line-height: 1.8125rem;
@@ -538,14 +537,14 @@ letter-spacing: -0.5px;
 text-align: center;
 color: #323522; */
 .contact-block__title {
-  font-family: "Gazpacho" !important;
+  font-family: 'Lato', sans-serif;
   font-size: 2.2rem !important;
   font-weight:500;
   margin-bottom: 24px;
 }
 
 .contact-block__subtitle{
-  font-family: "Gazpacho" !important;
+  font-family: 'Lato', sans-serif;
   font-size: calc(13px + (21 - 14) * ((100vw - 375px) / (1600 - 375))) !important;
   font-weight: 500;
   margin-bottom: 24px;
@@ -868,7 +867,7 @@ color: #323522; */
   max-width: 400px;
   color: #fff;
   font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   gap: 30px;
   cursor: pointer;
@@ -1183,4 +1182,22 @@ color: #323522; */
     padding-bottom: 8px;
     
   }
+}
+
+
+/* karta s odkazem (ČAP) – stejný vzhled jako ostatní karty */
+a.contact-info-box {
+  text-decoration: none;
+  color: #fff;
+}
+
+a.contact-info-box:hover {
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4),
+    0 0 0 2px rgba(255, 255, 255, 0.2) inset;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+a.contact-info-box:focus-visible {
+  outline: 2px solid #F5F4E6;
+  outline-offset: 3px;
 }

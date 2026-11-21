@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 body {
   margin: 0;
@@ -97,14 +96,14 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   position: relative;
 }
 
 
 .main-title {
   font-size: 2.5rem;
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
   margin: 0 0 20px 0;
   letter-spacing: -0.5px;
@@ -166,7 +165,7 @@ body {
 .section-green h2 {
   font-size: 2rem;
   margin-bottom: 24px;
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: #23281C;
   text-align: center
@@ -236,7 +235,7 @@ body {
   align-items: center;
 }
 .section-dark h2 {
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Lato', sans-serif;
   font-size: 2.1rem;
   margin: 36px 0 18px 0;
   color: #ECE9D8;
@@ -591,7 +590,7 @@ button:hover, input[type="submit"]:hover {
   margin-left: 0;
   margin-right: auto; 
   margin-bottom: 10px;
-  font-family: DM Sans;
+  font-family: 'Lato', sans-serif;
   font-size: calc(13px + (21 - 14) * ((100vw - 375px) / (1600 - 375))); 
   line-height: 2.1;
 
@@ -966,7 +965,7 @@ button:hover, input[type="submit"]:hover {
 .section-content h2 {
   font-size: 2.2rem;
   margin-bottom: 28px;
-  font-family: "Gazpacho" !important;
+  font-family: 'Lato', sans-serif;
   font-weight: 500;
   line-height: 1.8125rem;
 }
@@ -1057,4 +1056,231 @@ button:hover, input[type="submit"]:hover {
   .section-dark h2::after {
     width: 120px;
   }
+}
+
+/* ================= CENÍK – přepracované rozložení ================= */
+.section-green .section-content.price-content {
+  max-width: 900px;
+  padding: 80px 24px 140px 24px;
+  align-items: stretch;
+}
+
+/* nadpisy sekcí jako obdélníčky (stejně jako tlačítka v menu) */
+.section-green .price-content h2 {
+  display: table;
+  margin: 56px auto 28px auto;
+  padding: 12px 36px;
+  min-width: 160px;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #23281C;
+  text-align: center;
+  background: #F5F4E6;
+  border: 1.5px solid #23281C;
+  border-radius: 24px;
+}
+
+.section-green .price-content h2:first-child {
+  margin-top: 0;
+}
+
+.section-green .price-content h2::after {
+  display: none;
+}
+
+/* karty s cenami: do šířky, 2 sloupce */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+.price-card {
+  background: rgba(245, 244, 230, 0.55);
+  border: 1.5px solid rgba(35, 40, 28, 0.35);
+  border-radius: 24px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.price-card--wide {
+  grid-column: 1 / -1;
+}
+
+.price-card h3 {
+  margin: 0 0 12px 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #23281C;
+}
+
+.price-card .price {
+  margin: 0 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem !important;
+  line-height: 1.3 !important;
+  font-weight: 400;
+  text-align: center !important;
+  color: #23281C;
+}
+
+.price-card .price span {
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+/* číslo účtu v obdélníčku */
+.payment-box {
+  margin: 40px auto 0 auto;
+  width: 100%;
+  max-width: 620px;
+  box-sizing: border-box;
+  background: #F5F4E6;
+  border: 1.5px solid #23281C;
+  border-radius: 24px;
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.payment-box h3 {
+  margin: 0 0 14px 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #23281C;
+}
+
+.payment-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+}
+
+.payment-row + .payment-row {
+  border-top: 1px solid rgba(35, 40, 28, 0.18);
+}
+
+.payment-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.payment-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* pojišťovny: karty ve dvou sloupcích */
+.insurance-intro {
+  text-align: center !important;
+  margin: 0 0 24px 0 !important;
+  font-size: 1.13rem !important;
+}
+
+.section-green .insurance-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin: 0 0 28px 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  list-style: none;
+}
+
+.section-green .insurance-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 0;
+  padding: 18px 22px;
+  background: rgba(245, 244, 230, 0.55);
+  border: 1.5px solid rgba(35, 40, 28, 0.35);
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.section-green .insurance-list li::before {
+  display: none;
+}
+
+.section-green .insurance-list li strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.insurance-note {
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+/* závěrečné informace v obdélníčku */
+.info-box {
+  margin: 48px auto 0 auto;
+  max-width: 700px;
+  box-sizing: border-box;
+  background: #F5F4E6;
+  border: 1.5px solid #23281C;
+  border-radius: 24px;
+  padding: 24px 32px;
+}
+
+.info-box p {
+  margin: 0 0 14px 0 !important;
+  line-height: 1.7 !important;
+  text-align: center !important;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.info-box a {
+  color: #23281C;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .section-green .section-content.price-content {
+    padding: 70px 16px 130px 16px;
+  }
+
+  .price-grid,
+  .section-green .insurance-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .price-card h3 { font-size: 1.1rem; }
+  .price-card .price { font-size: 1.4rem !important; }
+
+  .payment-box { padding: 20px 16px; }
+  .payment-value { font-size: 1.05rem; white-space: normal; }
+
+  .info-box { padding: 20px 18px; }
+  .info-box p { font-size: 16px !important; }
+}
+
+
+/* přebití pravidla .section-green p { text-align: right } */
+.section-green .insurance-intro,
+.section-green .insurance-note,
+.section-green .info-box p {
+  text-align: center !important;
 }

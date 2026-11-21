@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terapie a poradenství - Moje služby</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="icon" type="image/svg+xml" href="../ikonky/zkouska2.svg">
+  <link rel="icon" type="image/svg+xml" href="ikonky/zkouska2.svg">
 
 </head>
 <button id="scrollUpBtn" aria-label="Zpět nahoru">
@@ -61,7 +61,7 @@
           <span class="desktop-and"> a </span>
         </span>
         diagnostika
-        <br>Poradenská psychoterapie
+        <span class="main-title-line2">Poradenská psychoterapie</span>
       </h1>
       <h2 class="main-subtitle">Mgr. Jana Kohnová</h2>
       <div class="hero-svg-icon">
@@ -80,7 +80,7 @@
       </nav>
     </section>
   </main>
-  <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
+  <svg width="100%" height="100%" id="svg" viewBox="0 120 1440 150" xmlns="http://www.w3.org/2000/svg"
     class="transition duration-300 ease-in-out delay-150"
     style="margin:0; padding:0; background: linear-gradient(180deg,rgba(245, 244, 230, 1) 0%, rgba(184, 194, 167, 1) 99%);">
     <path
@@ -91,6 +91,9 @@
   <section class="section-green" id="terapie">
     <div class="section-content">
       <h2>Terapie a poradenství</h2>
+
+      <p>„Své klienty vnímám jako experty na svůj život. Mojí úlohou je vytvářet bezpečný prostor, kde mohou objevovat
+        možnosti a řešení, která pro ně fungují.“</p>
 
       <p>Ve své praxi se věnuji psychologickému poradenství a terapii. Nabízím bezpečný prostor, kde můžete otevřeně
         mluvit o svých tématech a hledat cestu k větší spokojenosti a rovnováze.
@@ -107,8 +110,6 @@
           traumatických událostí, …</li>
 
       </ul>
-      <p>„Své klienty vnímám jako experty na svůj život. Mojí úlohou je vytvářet bezpečný prostor, kde mohou objevovat
-        možnosti a řešení, která pro ně fungují.“</p>
       <p class="center-cap-text">Jsem členkou České asociace pro psychoterapii (ČAP).</p>
       <div class="cap-photo">
         <img src="cap.png" alt="Česká asociace pro terapii" />
@@ -119,7 +120,7 @@
 
   </section>
 
-  <svg width="100%" height="auto" id="svg" viewBox="0 50 1440 380" xmlns="http://www.w3.org/2000/svg"
+  <svg width="100%" height="auto" id="svg" viewBox="0 78 1440 152" xmlns="http://www.w3.org/2000/svg"
     class="transition duration-300 ease-in-out delay-150"
     style="margin:0; padding:0; background: linear-gradient(180deg,rgba(184, 194, 167, 1) 0%, rgba(205, 197, 176, 1) 49%, rgba(205, 197, 176, 1) 100%);">
     <path
@@ -287,12 +288,18 @@
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     });
   </script>
-
-
+  <script>
+    // Kolečko s domečkem: na úvodní stránce vrátí nahoru (jinak by odkazovalo samo na sebe)
+    document.querySelector('.fixed-logo').addEventListener('click', (e) => {
+      e.preventDefault();
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  </script>
 
 </body>
 <footer class="footer">
-  <p class="footer-text">Všechna práva vyhrazena © 2025. Jana Kohnová.</p>
+  <p class="footer-text">Všechna práva vyhrazena © 2026. Jana Kohnová.</p>
 </footer>
 
 </html>
