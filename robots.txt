@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /navrh.html
+
+Sitemap: https://janakohnova.cz/sitemap.xml
