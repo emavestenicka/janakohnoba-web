@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NÁVRH – Psychoterapie a poradenství</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="navrh.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" type="image/svg+xml" href="ikonky/zkouska2.svg">
+
+</head>
+<button id="scrollUpBtn" aria-label="Zpět nahoru">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="12" cy="12" r="12" fill="none" />
+    <path d="M8 14l4-4 4 4" stroke="var(--btn-fg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+
+<body>
+  <a href="index.html" class="fixed-logo" aria-label="Homepage logo" title="Homepage">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M9 21H4C3.44772 21 3 20.5523 3 20V12.4142C3 12.149 3.10536 11.8946 3.29289 11.7071L11.2929 3.70711C11.6834 3.31658 12.3166 3.31658 12.7071 3.70711L20.7071 11.7071C20.8946 11.8946 21 12.149 21 12.4142V20C21 20.5523 20.5523 21 20 21H15M9 21H15M9 21V15C9 14.4477 9.44772 14 10 14H14C14.5523 14 15 14.4477 15 15V21"
+        stroke="white" stroke-linejoin="round"></path>
+    </svg>
+  </a>
+  <div class="section-indicator"></div>
+  <nav class="navbar minimal-nav">
+    <div class="nav-center">
+      <a href="index.html" class="nav-logo nav-active">Moje služby</a>
+      <a href="o-mne.html">O mně</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:jana.kohnova@gmail.com" class="cta-btn" id="copyEmailBtn">jana.kohnova@gmail.com</a>
+    </div>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="nav-logo nav-active">Moje služby</a>
+    <a href="o-mne.html">O mně</a>
+    <a href="cenik.html">Ceník</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="#" class="cta-btn" id="copyEmailBtn">jana.kohnova@gmail.com</a>
+  </div>
+
+  <main class="main-hero">
+    <section>
+
+      <h1 class="main-title" style="letter-spacing: 1px;">
+        Psychologické poradenství
+        <span class="main-title-and">
+          <span class="mobile-break"><br>a<br></span>
+          <span class="desktop-and"> a </span>
+        </span>
+        diagnostika
+        <span class="main-title-line2">Poradenská psychoterapie</span>
+      </h1>
+      <h2 class="main-subtitle">Mgr. Jana Kohnová</h2>
+      <div class="hero-svg-icon">
+        <svg width="642" height="602" viewBox="0 0 642 602" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M346.698 264.655C365.812 263.388 386.561 270.565 399.827 283.032C411.24 293.758 415.893 300.973 422.821 318.691C429.375 335.453 431.487 347.711 432.627 375.586C433.804 404.356 433.671 419.577 432.144 430.799C430.753 441.019 429.787 443.222 426.698 443.222C424.879 443.222 422.334 440.75 422.334 438.985C422.335 438.253 422.861 434.081 423.503 429.712C424.856 420.515 425.164 401.871 424.257 384.129L423.634 371.946L421.64 374.674C418.483 378.997 413.096 383.636 405.244 388.793C393.535 396.481 387.768 398.904 369.922 403.64C354.468 407.741 344.252 409.461 328.88 410.545C310.804 411.821 294.349 410.39 278.334 406.147C269.772 403.879 270.439 402.54 271.897 419.041C273.907 441.794 273.683 443.95 269.304 443.95C265.851 443.95 265.46 442.47 264.216 424.677C262.468 399.674 262.869 401.5 258.828 400.14C256.957 399.51 252.153 397.526 248.153 395.731C244.153 393.936 237.116 390.865 232.516 388.908C222.358 384.585 201.474 372.368 200.843 370.379C200.224 368.429 202.364 365.404 204.363 365.404C205.26 365.404 211.173 368.354 217.502 371.959C223.935 375.622 233.463 380.276 239.106 382.512C244.658 384.712 251.682 387.643 254.714 389.025C270.887 396.395 297.875 402.484 314.411 402.492C331.918 402.501 348.45 400.226 367.475 395.19C383.797 390.87 389.679 388.394 400.532 381.273C413.123 373.011 417.34 367.814 419.365 358.061C420.969 350.332 416.393 336.337 411.421 333.766C410.223 333.147 409.244 332.328 409.244 331.946C409.244 329.856 396.309 326.126 389.092 326.136C385.799 326.141 377.61 327.881 353.29 333.745C336.126 337.883 325.791 338.873 310.082 337.884C290.77 336.669 276.719 333.193 259.971 325.489C252.622 322.108 249.971 319.819 249.971 316.855C249.971 312.833 253.872 311.692 257.203 314.741C258.225 315.676 260.862 317.196 263.062 318.119C265.262 319.042 268.118 320.242 269.409 320.786C271.747 321.77 271.753 321.767 271.066 319.96C270.687 318.962 270.612 317.562 270.901 316.849C272.003 314.126 279.502 302.265 283.377 297.117C289.423 289.084 289.469 289.018 289.163 288.79C288.064 287.967 277.106 282.962 273.244 281.518C261.169 277.005 245.483 275.696 235.425 278.363C224.232 281.331 213.406 288.279 205.482 297.581C181.785 325.397 173.675 378.39 184.217 436.523C185.973 446.204 186.021 447.037 184.928 448.705C183.335 451.136 179.89 451.153 178.307 448.737C176.01 445.231 172.623 421.708 171.386 400.669C170.087 378.575 172.102 355.111 176.87 336.776C186.229 300.796 206.049 277.189 232.88 270.064C240.694 267.989 254.965 267.824 263.788 269.707C275.937 272.298 291.412 278.905 293.386 282.344L294.601 284.461L300.498 280.243C312.756 271.475 329.614 265.787 346.698 264.655ZM368.244 275.617C352.618 271.126 334.819 273.012 316.613 281.085C302.209 287.471 292.665 296.464 282.03 313.672C279.483 317.793 276.709 321.43 275.867 321.754C274.394 322.322 274.412 322.376 276.309 323.12C282.799 325.665 295.75 328.298 305.607 329.075C315.692 329.87 330.536 329.379 338.334 327.992C341.934 327.351 353.062 324.8 363.062 322.322C379.495 318.249 381.978 317.814 388.88 317.806C398.421 317.795 406.175 319.509 411.739 322.859C416.582 325.775 416.588 326.286 411.659 314.495C407.718 305.067 405.227 301.258 397.943 293.515C389.114 284.13 381.137 279.322 368.244 275.617Z"
+            fill="black" />
+          <path
+            d="M331.468 111.287C343.646 105.241 355.699 104.394 368.575 108.677C385.232 114.217 400.847 130.851 407.489 150.131C408.247 152.331 409.046 154.295 409.265 154.495C409.761 154.953 411.947 168.493 412.563 174.92C412.816 177.554 412.645 183.445 412.183 188.011C409.229 217.21 391.89 240.467 368.516 246.582C359.275 248.999 346.801 247.906 337.539 243.867C328.417 239.889 316.516 229.482 310.732 220.425C305.231 211.809 298.836 195.641 298.647 189.868C298.597 188.354 298.578 188.352 297.97 189.768C297.626 190.568 297.322 192.388 297.294 193.812C297.266 195.237 296.566 198.988 295.738 202.148C289.6 225.583 276.058 241.767 257.313 248.075C250.369 250.412 239.54 250.998 232.568 249.414C226.717 248.084 218.377 244.159 212.512 239.974C200.839 231.644 190.925 216.268 186.237 199.222C184.372 192.439 184.237 190.995 184.239 177.768C184.241 164.678 184.391 163.029 186.188 156.365C192.408 133.292 208.064 116.144 227.421 111.204C237.221 108.703 249.16 109.953 259.271 114.537C276.646 122.416 291.5 142.38 296.033 163.949L297.027 168.677L297.515 165.768C301.135 144.153 306.241 133.051 317.955 121.33C323.491 115.791 325.696 114.152 331.468 111.287ZM248.482 119.932C243.42 118.584 234.004 118.576 228.975 119.915C212.954 124.179 199.72 139.193 194.648 158.858C192.633 166.672 191.947 181.281 193.222 189.238C197.354 215.03 213.54 235.544 233.816 240.685C239.506 242.128 249.038 241.65 255.062 239.619C276.258 232.472 290.354 207.378 288.989 179.222C287.594 150.425 270.822 125.877 248.482 119.932ZM352.824 115.222C336.062 115.222 322.302 124.749 313.398 142.518C303.535 162.205 303.829 187.87 314.157 208.677C321.112 222.688 334.189 234.322 346.788 237.711C352.115 239.144 362.213 239.137 367.111 237.697C388.905 231.292 403.479 208.384 403.618 180.313C403.721 159.54 396.956 141.969 383.87 129.026C373.973 119.237 364.943 115.222 352.824 115.222Z"
+            fill="black" />
+        </svg>
+      </div>
+      <nav class="hero-subnav">
+        <a href="#terapie">Psychoterapie a poradenství</a>
+        <a href="#supervize">Supervize</a>
+      </nav>
+    </section>
+  </main>
+  <svg width="100%" height="100%" id="svg" viewBox="0 120 1440 150" xmlns="http://www.w3.org/2000/svg"
+    class="transition duration-300 ease-in-out delay-150"
+    style="margin:0; padding:0; background: linear-gradient(180deg,rgba(245, 244, 230, 1) 0%, rgba(184, 194, 167, 1) 99%);">
+    <path
+      d="M 0,500 L 0,187 C 192.53333333333336,153.39999999999998 385.0666666666667,119.79999999999998 563,142 C 740.9333333333333,164.20000000000002 904.2666666666667,242.2 1048,259 C 1191.7333333333333,275.8 1315.8666666666668,231.4 1440,187 L 1440,500 L 0,500 Z"
+      stroke="none" stroke-width="0" fill="#b8c2a7" fill-opacity="1"
+      class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+  </svg>
+  <!-- ============ 1) PSYCHOTERAPIE A PORADENSTVÍ ============ -->
+  <section class="band band--sage" id="terapie">
+    <div class="band__inner split">
+      <div class="split__text reveal">
+        <h2 class="band-title">Psychoterapie a poradenství</h2>
+        <blockquote class="pull-quote">
+          „Své klienty vnímám jako experty na svůj život. Mojí úlohou je vytvářet bezpečný prostor, kde mohou
+          objevovat možnosti a řešení, která pro ně fungují.“
+        </blockquote>
+        <p class="body-text">Ve své praxi se věnuji psychologickému poradenství a terapii. Nabízím bezpečný prostor, kde
+          můžete otevřeně mluvit o svých tématech a hledat cestu k větší spokojenosti a rovnováze.</p>
+        <div class="cap-badge">
+          <img src="cap.png" alt="Česká asociace pro psychoterapii" />
+          <span>Jsem členkou České asociace pro psychoterapii (ČAP).</span>
+        </div>
+      </div>
+      <div class="split__art reveal">
+        <div class="arch"><img src="ikonky/poradenstvi1.svg" alt="" /></div>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="background:#B8C2A7" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#E6E3D2" d="M0,50 C180,95 360,95 540,55 C760,5 980,15 1200,60 C1300,80 1380,70 1440,55 L1440,100 L0,100 Z"/></svg>
+  </div>
+
+  <!-- ============ 2) S ČÍM SE NA MĚ MŮŽETE OBRÁTIT ============ -->
+  <section class="band band--light">
+    <div class="band__inner">
+      <h2 class="band-title band-title--center reveal">S čím se na mě můžete obrátit?</h2>
+      <ul class="help-grid reveal">
+        <li>Osobní rozvoj a vztah k sobě samému</li>
+        <li>Pracovní uplatnění a životní orientace</li>
+        <li>Partnerské a rodinné vztahy</li>
+        <li>Dlouhodobá nespokojenost, ztráta motivace a energie</li>
+        <li>Konflikty v partnerství, rodičovství či na pracovišti</li>
+        <li>Psychické obtíže: smutek, deprese, úzkosti, panické stavy, problémy se zvládáním emocí, následky
+          traumatických událostí, …</li>
+      </ul>
+    </div>
+  </section>
+  <div class="divider" style="background:#E6E3D2" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#323522" d="M0,60 C200,10 420,10 640,50 C860,92 1100,95 1300,50 C1360,38 1410,38 1440,45 L1440,100 L0,100 Z"/></svg>
+  </div>
+
+  <!-- ============ 3) SUPERVIZE (tmavý pás) ============ -->
+  <section class="band band--dark" id="supervize">
+    <div class="band__inner split split--reverse">
+      <div class="split__art reveal">
+        <div class="arch arch--cream"><img src="ikonky/supervize1.svg" alt="" /></div>
+      </div>
+      <div class="split__text reveal">
+        <h2 class="band-title">Supervize</h2>
+        <p class="body-text">Supervizi vnímám jako kolegiální prostor pro reflektivní prožitek vaší profesní praxe,
+          objevování nových perspektiv a podporu osobního i odborného růstu. Umožňuje sdílet zkušenosti, zpracovávat
+          náročné situace a nacházet cesty, které jsou v souladu s vaší profesní identitou.</p>
+        <div class="cap-badge cap-badge--light">
+          <img src="cap.png" alt="Česká asociace pro psychoterapii" />
+          <span>Jsem supervizorka zapsaná v registru ČAP.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="background:#323522" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#F5F4E6" d="M0,45 C160,80 340,98 560,70 C800,38 1040,5 1240,40 C1330,56 1400,70 1440,65 L1440,100 L0,100 Z"/></svg>
+  </div>
+
+  <!-- ============ 4) NABÍZÍM SPOLUPRÁCI FORMOU ============ -->
+  <section class="band band--cream">
+    <div class="band__inner">
+      <h2 class="band-title band-title--center reveal">Nabízím spolupráci formou</h2>
+      <div class="cards cards--three reveal">
+        <article class="card">
+          <span class="card__num">01</span>
+          <h3>Individuální supervize</h3>
+          <p>Zaměřenou na osobní profesní témata, rozvoj dovedností a podporu při náročných situacích.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02</span>
+          <h3>Skupinové supervize</h3>
+          <p>Umožňující bohatší kolegiální inspiraci a spolupráci.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">03</span>
+          <h3>Týmové supervize</h3>
+          <p>Podporující spolupráci, sdílení zkušeností a hlubší porozumění týmovým procesům.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <div class="divider" style="background:#F5F4E6" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#CDC5B0" d="M0,70 C220,98 440,95 660,60 C880,25 1120,8 1440,55 L1440,100 L0,100 Z"/></svg>
+  </div>
+
+  <!-- ============ 5) SUPERVIZE MŮŽE PROBÍHAT JAKO + PRO KOHO ============ -->
+  <section class="band band--sand">
+    <div class="band__inner">
+      <h2 class="band-title band-title--center reveal">Supervize může probíhat jako</h2>
+      <div class="cards cards--two reveal">
+        <article class="card card--fill">
+          <h3>Případová supervize</h3>
+          <p>Zaměřené na konkrétní klientské situace.</p>
+        </article>
+        <article class="card card--fill">
+          <h3>Profesně rozvojová supervize</h3>
+          <p>Směřující k dlouhodobému profesnímu růstu, prevenci vyhoření a rozvoji vaší terapeutické praxe.</p>
+        </article>
+      </div>
+      <p class="audience reveal">Je určena psychologům, terapeutům, pedagogům a dalším odborníkům v pomáhajících
+        profesích, kteří chtějí prohlubovat svou profesní praxi a zároveň se vědomě rozvíjet.</p>
+    </div>
+  </section>
+
+  <script>
+    // plynulé objevování sekcí při posunu (bez JS i při "omezit pohyb" je vše hned vidět)
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('#copyEmailBtn');
+      if (!btn) return;
+      e.preventDefault();
+      const email = btn.dataset.email || btn.textContent.trim();
+
+      try {
+        await navigator.clipboard.writeText(email);
+        const orig = btn.innerHTML;
+
+        const copiedIcon = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.985 511.985" width="16" height="16" style="vertical-align:middle;margin-left:6px;">
+          <path d="M500.088 83.681c-15.841-15.862-41.564-15.852-57.426 0L184.205 342.148 69.332 227.276c-15.862-15.862-41.574-15.862-57.436 0-15.862 15.862-15.862 41.574 0 57.436l143.585 143.585c7.926 7.926 18.319 11.899 28.713 11.899 10.394 0 20.797-3.963 28.723-11.899l287.171-287.181c15.862-15.851 15.862-41.574 0-57.435z" fill="#ffffff"/>
+        </svg>`;
+
+        btn.innerHTML = `Zkopírováno ${copiedIcon}`;
+
+        setTimeout(() => btn.innerHTML = orig, 800);
+        return;
+      } catch (err) {
+
+      }
+
+      const ta = document.createElement('textarea');
+      ta.value = email;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) { }
+      document.body.removeChild(ta);
+    });
+  </script>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+
+
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+
+        if (this.id === 'copyEmailBtn' || this.classList.contains('copyEmail')) {
+          return;
+        }
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+
+    function animateOnScroll() {
+      const animatedElements = document.querySelectorAll('[data-animation-delay]');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = entry.target.getAttribute('data-animation-delay');
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }, parseFloat(delay) * 1000);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const heroElements = document.querySelectorAll('.main-hero *');
+      heroElements.forEach((element, index) => {
+        setTimeout(() => {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }, (index + 1) * 200);
+      });
+
+
+      animateOnScroll();
+    });
+
+
+
+  </script>
+  <script>
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
+
+    function onScroll() {
+      if (window.scrollY > 300) {
+        scrollUpBtn.classList.add('show');
+      } else {
+        scrollUpBtn.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    scrollUpBtn.addEventListener('click', () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    });
+  </script>
+  <script>
+    // Kolečko s domečkem: na úvodní stránce vrátí nahoru (jinak by odkazovalo samo na sebe)
+    document.querySelector('.fixed-logo').addEventListener('click', (e) => {
+      e.preventDefault();
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  </script>
+
+</body>
+<footer class="footer">
+  <p class="footer-text">Všechna práva vyhrazena © 2026. Jana Kohnová.</p>
+</footer>
+
+</html>

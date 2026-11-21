@@ -1,0 +1,352 @@
+/* ===========================================================
+   NÁVRH – nové rozdělení úvodní stránky (po hero části)
+   Paleta: krém #F5F4E6 · šalvěj #B8C2A7 · písek #CDC5B0
+           světlý písek #E6E3D2 · tmavá oliva #323522 · text #23281C
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --cream: #F5F4E6;
+  --sage: #B8C2A7;
+  --sand: #CDC5B0;
+  --sand-light: #E6E3D2;
+  --olive: #323522;
+  --ink: #23281C;
+}
+
+/* ---------- pásy ---------- */
+.band {
+  position: relative;
+  padding: 90px 24px;
+  font-family: 'Lato', sans-serif;
+  color: var(--ink);
+}
+
+.band--sage  { background: var(--sage); }
+.band--light { background: var(--sand-light); }
+.band--cream { background: var(--cream); }
+.band--sand  { background: var(--sand); padding-bottom: 110px; }
+.band--dark  { background: var(--olive); color: var(--cream); }
+
+.band__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ---------- vlnové předěly ---------- */
+.divider {
+  display: block;
+  line-height: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.divider svg {
+  display: block;
+  width: 100%;
+  height: clamp(50px, 7vw, 100px);
+}
+
+/* ---------- nadpisy ---------- */
+.band-title {
+  margin: 0 0 28px 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: inherit;
+}
+
+.band-title--center {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* tenká linka pod nadpisem */
+.band-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin-top: 20px;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.band-title--center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- dvousloupcové rozdělení ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+
+.split--reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.split__text {
+  max-width: 560px;
+}
+
+.body-text {
+  margin: 0 0 24px 0;
+  font-size: 1.12rem;
+  line-height: 1.85;
+  text-align: left;
+}
+
+/* citát */
+.pull-quote {
+  position: relative;
+  margin: 0 0 32px 0;
+  padding: 4px 0 4px 28px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 2px solid rgba(35, 40, 28, 0.35);
+}
+
+/* ---------- oblouk s ilustrací ---------- */
+.split__art {
+  display: flex;
+  justify-content: center;
+}
+
+.arch {
+  position: relative;
+  width: min(360px, 100%);
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+  background: var(--sand-light);
+  border-radius: 999px 999px 28px 28px;
+}
+
+/* posunutý obrys oblouku */
+.arch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(16px, 16px);
+  border: 1.5px solid currentColor;
+  border-radius: 999px 999px 28px 28px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.arch img {
+  position: relative;
+  width: 78%;
+  height: auto;
+  display: block;
+  /* ilustrace má bílé pozadí – splyne s barvou oblouku */
+  mix-blend-mode: multiply;
+}
+
+.band--sage .arch {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.arch--cream {
+  background: var(--cream);
+  color: var(--cream);
+}
+
+/* ---------- odznak ČAP ---------- */
+.cap-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px 10px 12px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.cap-badge img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  flex: none;
+}
+
+/* ---------- mřížka "s čím se na mě můžete obrátit" ---------- */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.help-grid li {
+  padding: 34px 32px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* svislé dělicí linky mezi sloupci */
+.help-grid li:not(:nth-child(3n + 1)) {
+  border-left: 1.5px solid rgba(35, 40, 28, 0.28);
+}
+
+/* vodorovná linka mezi řádky */
+.help-grid li:nth-child(-n + 3) {
+  border-bottom: 1.5px solid rgba(35, 40, 28, 0.28);
+}
+
+/* ---------- karty ---------- */
+.cards {
+  display: grid;
+  gap: 24px;
+}
+
+.cards--three { grid-template-columns: repeat(3, 1fr); }
+.cards--two   { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  position: relative;
+  padding: 36px 30px 34px 30px;
+  border: 1.5px solid var(--ink);
+  border-radius: 28px;
+  background: transparent;
+}
+
+.card--fill {
+  background: var(--cream);
+}
+
+.card__num {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  opacity: 0.55;
+}
+
+.card h3 {
+  margin: 0 0 12px 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* věta "Je určena…" */
+.audience {
+  max-width: 720px;
+  margin: 56px auto 0 auto;
+  padding-top: 36px;
+  border-top: 1.5px solid rgba(35, 40, 28, 0.28);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ---------- objevování při posunu ---------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- mobil ---------- */
+@media (max-width: 860px) {
+  .band {
+    padding: 64px 20px;
+  }
+
+  .band--sand {
+    padding-bottom: 80px;
+  }
+
+  .split,
+  .split--reverse {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  /* ilustrace nad textem */
+  .split--reverse .split__art,
+  .split .split__art {
+    order: -1;
+  }
+
+  .split__text {
+    max-width: none;
+  }
+
+  .arch {
+    width: min(250px, 70%);
+  }
+
+  .body-text { font-size: 1.05rem; }
+  .pull-quote { font-size: 1.15rem; padding-left: 20px; }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-grid li {
+    padding: 24px 12px;
+  }
+
+  .help-grid li:not(:nth-child(3n + 1)) {
+    border-left: none;
+  }
+
+  .help-grid li:nth-child(-n + 3) {
+    border-bottom: none;
+  }
+
+  .help-grid li:not(:last-child) {
+    border-bottom: 1.5px solid rgba(35, 40, 28, 0.28);
+  }
+
+  .cards--three,
+  .cards--two {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card { padding: 28px 24px; }
+  .audience { font-size: 1.08rem; margin-top: 40px; padding-top: 28px; }
+
+  .band-title--center { margin-bottom: 36px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
